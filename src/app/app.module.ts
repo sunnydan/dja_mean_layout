@@ -3,12 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { FormsModule } from '@angular/forms'; // <-- Import FormsModule
+import { HttpModule } from '@angular/http';
+import { HeaderComponentComponent } from './header-component/header-component.component';
+import { NavComponentComponent } from './nav-component/nav-component.component';
+import { MainComponentComponent } from './main-component/main-component.component'; // <-- Import HttpModule
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponentComponent,
+    NavComponentComponent,
+    MainComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule, // <-- Include module in our AppModules
+    HttpModule // <-- Include module in our AppModules
   ],
   providers: [],
   bootstrap: [AppComponent]
